@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profilepage.css">
+</head>
+<body>
+    <div id="header-root"></div>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="images/profile.jpeg" alt="Profile Picture" class="profile-picture">
+            <h1 class="user-name">My Account</h1>
+        </div>
+        <div class="profile-details">
+            <div class="profile-section">
+                <h2>Contact Information</h2>
+                <p><strong>Name:</strong></p>
+                <p><strong>Email:</strong></p>
+                <p><strong>Phone:</strong></p>
+                <p><strong>Unique Identification Number:</strong></p>
+            </div>
+            <div class="profile-section">
+                <button class="wishlist-button" id="wishlist">Wishlist</button>
+            </div>
+            <div class="profile-section">
+                <h2>Land Bought</h2>
+                <ul>
+                    <li><img src="https://via.placeholder.com/150" alt="land1" class="land-1"></li>
+                    <li><img src="https://via.placeholder.com/150" alt="land2" class="land-2"></li>
+                    <li><img src="https://via.placeholder.com/150" alt="land3" class="land-3"></li>
+                </ul>
+            </div>
+            <div class="profile-section">
+                <h2>Land Sold</h2>
+                <ul>
+                    <li><img src="https://via.placeholder.com/150" alt="land1" class="land-1"></li>
+                    <li><img src="https://via.placeholder.com/150" alt="land2" class="land-2"></li>
+                    <li><img src="https://via.placeholder.com/150" alt="land3" class="land-3"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="profilepage.js" type="text/babel"></script>
+</body>
+</html>

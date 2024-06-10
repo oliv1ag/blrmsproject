@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #eddec4;
+    color: #5a360d;
+  }
+  
+  .container {
+    width: 1000px; /* Increased width */
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .land-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .land-details img {
+    max-width: 200px; /* Increased image size */
+    height: auto;
+    margin-right: 30px; /* Increased margin */
+  }
+  
+  .details p {
+    margin: 5px 0;
+  }
+  
+  hr {
+    margin: 20px 0;
+  }
+  
+  .price-section, .taxes-section, .total-amount {
+    margin-bottom: 20px;
+  }
+  
+  .buy-button {
+    text-align: right;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #5a360d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #795935;
+  }
+  .Header-div {
+    width: 100%;
+    height: 100px;
+    background-color: #5a360d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+  }
+  .Logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+  }
+  .Logo:hover
+  {
+    cursor: pointer;
+  }
+  .Logo:active
+  {
+    opacity: 0.5;
+  }
+  .search-bar
+  {
+    width: 25%;
+    height: 40px;
+    position: absolute;
+    left: 63%;
+    border: none;
+    border-radius: 15px;
+    background-color: #eddec4;
+    font-size: 20px;
+    text-align: center;
+    color: #5a360d;
+  }
+  .heading-css
+  {
+    color: #eddec4;
+    position: absolute;
+    left: 8%;
+    font-size: 30px;
+    align-self: center      ;
+  }
+  .profile-css
+  {
+    position: absolute;
+    right: 5%;
+    color: #eddec4;
+    transition: opacity 0.3s;
+  }
+  .profile-css:hover
+  {
+    cursor: pointer;
+  }
+  .profile-css:active
+  {
+    opacity: 0.5;
+  }

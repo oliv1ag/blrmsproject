@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Payment Page - Land Registration System</title>
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+    <div id="header-root"></div>
+    <div class="container">
+        <h1>Land Registration and Management System</h1>
+        <h2>Payment Page</h2>
+        
+        <div class="payment-method">
+            <button id="netBankingBtn">Net Banking</button>
+            <button id="creditCardBtn">Credit Card/Debit Card</button>
+        </div>
+        
+        <div id="netBankingForm" class="payment-form">
+            <h3>Net Banking</h3>
+            <form>
+                <label for="bank">Select Bank:</label>
+                <select id="bank" name="bank">
+                    <option value="bank1">Bank 1</option>
+                    <option value="bank2">Bank 2</option>
+                    <option value="bank3">Bank 3</option>
+                </select>
+                <button id="pay1">Pay Now</button>
+            </form>
+        </div>
+        
+        <div id="creditCardForm" class="payment-form hidden">
+            <h3>Credit Card/Debit Card</h3>
+            <form>
+                <label for="name">Name of the Card Holder:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber">
+                
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY">
+                
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv">
+                
+                <button id="pay2">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="transaction.js" type="text/babel"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const netBankingBtn = document.getElementById('netBankingBtn');
+            const creditCardBtn = document.getElementById('creditCardBtn');
+            const pay1 = document.getElementById('pay1');
+            const netBankingForm = document.getElementById('netBankingForm');
+            const creditCardForm = document.getElementById('creditCardForm');
+            const pay2 = document.getElementById('pay2');
+            
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const role = urlParams.get('role');
+            
+            netBankingBtn.addEventListener('click', function() {
+                netBankingForm.classList.add('active');
+                creditCardForm.classList.remove('active');
+            });
+            
+            creditCardBtn.addEventListener('click', function() {
+                creditCardForm.classList.add('active');
+                netBankingForm.classList.remove('active');
+            });
+            
+            const cardNumberInput = document.getElementById('cardNumber');
+            const cvvInput = document.getElementById('cvv');
+            
+            // Regular expressions for validation
+            const cardNumberRegex = /^[0-9]{16}$/;
+            const cvvRegex = /^[0-9]{3}$/;
+            
+            // Event listener for card number input
+            cardNumberInput.addEventListener('input', function() {
+                const value = this.value;
+                if (!cardNumberRegex.test(value)) {
+                    this.setCustomValidity('Please enter a valid 16-digit card number.');
+                } else {
+                    this.setCustomValidity('');
+                }
+            });
+            
+            // Event listener for CVV input
+            cvvInput.addEventListener('input', function() {
+                const value = this.value;
+                if (!cvvRegex.test(value)) {
+                    this.setCustomValidity('Please enter a valid 3-digit CVV.');
+                } else {
+                    this.setCustomValidity('');
+                }
+            });
+            
+            // Event listener for "Pay Now" button in the Net Banking form
+            pay1.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                window.location.href = `confirmation.html?role=${role}`; // Redirect to confirmation page with role
+            });
+            
+            // Event listener for "Pay Now" button in the Credit Card form
+            pay2.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                window.location.href = `confirmation.html?role=${role}`; // Redirect to confirmation page with role
+            });
+        });                  
+    </script>
+</body>
+</html>

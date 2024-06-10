@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Registration Template</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="landtemplate.css">
+</head>
+<body>
+    <div id="header-root"></div>
+    <div class="container">
+        <div class="image-container">
+            <img alt="Land Image" id="land-image" class="Landimage">
+        </div>
+        <div class="details-container">
+            <h1>Land Registration Details</h1>
+            <form id="land-form" class="form">
+                <div id="owner-name"></div>
+                <div id="location-id"></div>
+                <div id="price-id"></div>
+                <div id="acres-id"></div>
+                <div id="registration-number"></div>
+                <div id="survey-number"></div>
+                <div id="latitude"></div>
+                <div id="longitude"></div>
+                <div id="history"></div>
+                <div id="google-maps-button"></div>
+                <div id="buy-button"></div>
+            </form>
+        </div>
+    </div>
+    <script src="landtemplate.js" type="text/babel"></script>
+</body>
+</html>

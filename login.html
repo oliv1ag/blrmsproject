@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<header>
+    <img src="Pictures/BLRMS.png"class="picture" id="pic">
+    <h1 class="logo">Land Registration Management</h1>
+    <nav class="navigation">
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<div class="wrapper">
+    <span class="icon-close" id="closeButton">
+        <ion-icon name="close"></ion-icon>
+    </span>
+    <div class="form-box login">
+        <h2>Login</h2>
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="signup.html">Forgot Password ? </a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="login-register">
+                <p>Don't have an account? <a href="signup.html" class="register-link">Sign up</a></p>
+                <p>If you are a surveyor, login via <a href="surveylogin.html">Survey Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>

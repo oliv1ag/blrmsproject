@@ -1,0 +1,123 @@
+body {
+    background-color: #eedece;
+    color: black;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #5a360d;
+}
+.container {
+    width: 700px;
+    border: none;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    align-self: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Changed to blue */
+    color: rgb(13, 11, 11); /* Adjust text color for better readability */
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5a360d;
+}
+.form-group {
+    margin-bottom: 15px;
+    color: #5a360d;
+}
+.label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #5a360d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.submit-button:hover {
+    background-color: #101020;
+}
+.Header-div {
+    width: 100%;
+    height: 100px;
+    background-color: #5a360d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding shadow */
+}
+
+.Logo {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+
+.Logo:hover {
+    cursor: pointer;
+}
+
+.Logo:active {
+    opacity: 0.5;
+}
+
+.search-bar {
+    width: 25%;
+    height: 40px;
+    position: absolute;
+    left: 65%;
+    border: none;
+    border-radius: 15px;
+    background-color: #eddec4;
+    font-size: 20px;
+    text-align: center;
+    color: #5a360d;
+}
+
+.heading-css {
+    color: #eddec4;
+    position: absolute;
+    left: 8%;
+    font-size: 30px;
+    align-self: center;
+}
+
+.profile-css {
+    position: absolute;
+    right: 5%;
+    color: #eddec4;
+    transition: opacity 0.3s;
+}
+
+.profile-css:hover {
+    cursor: pointer;
+}
+
+.profile-css:active {
+    opacity: 0.5;
+}

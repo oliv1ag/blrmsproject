@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eddec4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-up-container {
+    width: auto;
+    height: auto;   
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input, button {
+    width: calc(100% - 20px);
+    margin: 10px 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px double #000;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5a360d;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    opacity: 1;
+}
+
+.signup-text {
+    color: #5a360d;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.already-account, .sign-link {
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+}
+
+.sign-link a {
+    color: #5a360d;
+    text-decoration: none;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 50%;
+    transition: opacity 0.3s;
+}
+.logo:hover
+{
+    cursor: pointer;
+}
+.logo:active
+{
+    opacity: 0.5;
+}

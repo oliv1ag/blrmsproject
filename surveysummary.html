@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Purchase Summary</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link rel="stylesheet" href="surveysummary.css">
+</head>
+<body>
+    <div id="header-root"></div>
+    <div class="summary-container">
+        <h1>Transaction Summary</h1>
+        <div class="summary-card">
+            <div class="summary-section">
+                <h2>Transaction Details</h2>
+                <ul>
+                <li><strong>Transaction ID:</strong> <span id="transaction-id"></span></li>
+                <li><strong>Date:</strong> <span id="transaction-date"></span></li>
+                <li><strong>Amount Paid:</strong> ₹<span id="amount-paid"></span></li>
+                </ul>
+            </div>
+        <div class="summary-section">
+        <h2>Land Details</h2>
+        <ul>
+        <li><strong>Number of Acres:</strong> <span id="acres"></span></li>
+        <li><strong>Location:</strong> <span id="location"></span></li>
+        </ul>
+        <button id="continue" class="continue-btn">Continue</button>
+        <button id="printButton" class="print">Print Summary</button>
+        <script src="surveysummary.js" type="text/babel"></script>
+    </div>
+</body>
+</html>
